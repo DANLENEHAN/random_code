@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  
+  <title>ffff</title>
+
+<script>
+    function add(b) {
+        var result = (parseInt(b, 16).toString(2))
+        return (result);
+    }
+
+    function hex2bin(b) {
+        var res = "";
+        b.split(" ").forEach(str => {
+            res += add(str)
+        });
+        document.getElementById('pfg').innerHTML = res;
+    }
+</script>
+
+<head>
+    <title>HTML, CSS and JavaScript demo</title>
+</head>
+
+
+<body>
+
+
+    <h1>Converting Hexadecimal to Binary</h1>
+
+
+    <p>
+        In information technology a number base is the combination of digits used by a system of
+        counting to represent specific numbers. Below I am going to demonstrate with aid of
+        examples and diagrams how to convert hexadecimal to binary. I will briefly define both
+        hexadecimal and binary
+    </p>
+
+    <h4 class="no-bottom-margin">What is hexadecimal?</h4>
+    <p class="no-top-margin">
+        Hexadecimal (which is frequently referred to as hex) is useful for representing larger
+        numbers using fewer digits. It has 16 units and they are 0-9 and also the letters A,B,C,D,E
+        and F.
+    </p>
+
+    <h4 class="no-bottom-margin">What is binary?</h4>
+    <p class="no-top-margin">
+        Binary is a base two number system which means It has two units. These units are (0-1).
+        Binary is characterised by extremely long numbers that can be either 8, 16 or even 31- digits
+        long! These numbers may be difficult for humans to read and follow however, they are
+        essential in computer coding. Hexadecimal must be converted into binary for a computer or
+        information system to be able to understand it. It is used every day in computer coding to
+        represent data electronically.
+    </p>
+
+
+    <p>
+        Although Hexadecimal is a complex number system, it can easily be converted into binary.
+        Below I have included 5 steps that will show you exactly how this is done.
+    </p>
+
+    <p class="custom-margin-bottom">
+        <ol>
+            <li>
+                Step one is to determine the hexadecimal number you are dealing with and
+                convert their values (that are represented by numbers) to their decimal equivalent.
+            </li>
+            <li>
+                Each individual hexadecimal digit represents four binary digits (as can be seen in
+                the conversion table shown below) this in turn, means that each digit is equal to a
+                power of two.
+            </li>
+            <li>
+                Once you have understood this step you must now determine which one of the two
+                powers can be added together to give you your hex digit (either 8,4,2 and 1). For
+                example, if one of the hex values is 6 this means that 2 and 4 can be used in order
+                to add up to your hex number which is 6. This leaves the powers 1 and 8 unused.
+            </li>
+            <li>
+                To make things clear and easy to understand, you should write 1 beside the
+                powers that are used (2 and 4 in our case.) and to write 0 beside the ones that are
+                not used.
+            </li>
+            <li>
+                Finally, if you order these numbers from left to right you should produce the
+                binary conversion of your hexadecimal number
+            </li>
+            <li style="list-style: none; padding: 5px 0 5px 0">
+                Results for example above: 6=0110
+            </li>
+        </ol>
+    </p>
+
+    <div class="custom-margin-bottom">
+        <p style="text-align:center">
+            Table below includes an example of hexadecimal converted to binary:
+        </p>
+        <table class="center">
+            <tr>
+                <td>Hexadecimal</td>
+                <td>Binary</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0000</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>0001</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>0010</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="custom-margin-bottom">
+        <table class="center">
+            <tr>
+                <td>Hexadecimal</td>
+                <td>Binary</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>1001</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>1011</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>1100</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <h4 class="no-bottom-margin">Hexadecimal Converter:</h4>
+    <p class="no-top-margin">
+        Enter a single long Hex number or one that is space seperated for a valid result.
+    </p>
+    <p>
+        <input type="text" name="b" id="b" placeholder="Enter Hexadecimal">
+        <button onclick="hex2bin(document.getElementById('b').value)">Calculate</button>
+
+    </p>
+    Result: <span id="pfg"></span>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+li {
+    padding: 10px 0 10px 0;
+  }
+  .custom-margin-bottom {
+    margin-bottom: 40px;  
+  }
+  
+  .center {
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  table {
+      border-collapse: collapse;
+  }
+  
+  td {
+      border: 1px solid black;
+      padding: 10px
+  }
+  
+  .no-top-margin {
+      margin-top: 0;
+  }
+  
+  .no-bottom-margin {
+      margin-bottom: 0;
+  }
+  
+  input:focus::placeholder {
+    color: transparent;
+  }
